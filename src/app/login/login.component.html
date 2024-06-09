@@ -1,25 +1,27 @@
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="col">
             <h1>Listado</h1>
             <button class = "btn btn-primary" [disabled]="disabled" 
-            (click)="[agregarPersona(), checkDisabled()]">Agregar</button>
+            (click)="[agregarPersona(), checkDisabled()]">Agregar</button><br>
 
-            <p>{{ mensaje }}</p>
+            @if(mostrar) {
+                <p>No se ha agregado persona</p>
+            } @else {
+                <p>Persona agregada</p>
+            }
 
-            <!-- Agregar persona -->
              <label>Persona</label>
              <input type="text" class="form-control" (input)="modificarNombre($event)"><br>
              <label>Apellido</label>
 
-             <!-- en las dos direcciones -->
              <input type="text" class="form-control" [(ngModel)]="apellido">
 
              <p>{{ nombre }} {{ apellido }}</p>
 
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- <div (keyup)="0">
     <p>Ingrese su nombre: <input #name placeholder= "name"></p><br>
@@ -28,4 +30,60 @@
     <p>Su nombre es: {{name.value}}</p><br>
     <p>Su nombre es: {{ name1 }}</p>
 
+</div> -->
+
+<!-- Calculadora -->
+<!-- <div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Calculadora</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label>Digite el primer número: </label>
+            <input type="number" class="form-control" [(ngModel)]="num1"><br>
+            <label>Digite el segundo número: </label>
+            <input type="number" class="form-control" [(ngModel)]="num2"><br>
+
+            <button type = "button" class="btn btn-primary" (click)="[sumar()]" [disabled]="disabled">Sumar</button><br>
+
+            <p>El resultado es: {{ result }}</p>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="container">
+    <div class="col">
+        <h1>Listado de personas</h1>
+    </div>
+    <hr/>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nombre" 
+            [(ngModel)]="nombreInput">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Apellido"
+            [(ngModel)]="apellidoInput">
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-primary" (click)="agregarPersona2()">
+                Agregar
+            </button>
+        </div>
+    </div>
+    </div>
+     -->
+<!-- <div class="container">
+    <hr/>
+    <div class="col">
+        <p>Listado</p>
+        @for (persona of personas; track $index) {
+            <p>{{ $index + 1 }}. {{ persona.nombre }} {{ persona.apellido }}</p>
+        }
+    </div>
 </div> -->
