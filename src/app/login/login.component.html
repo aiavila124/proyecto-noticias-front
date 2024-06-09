@@ -1,1 +1,31 @@
-<p>login works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Listado</h1>
+            <button class = "btn btn-primary" [disabled]="disabled" 
+            (click)="[agregarPersona(), checkDisabled()]">Agregar</button>
+
+            <p>{{ mensaje }}</p>
+
+            <!-- Agregar persona -->
+             <label>Persona</label>
+             <input type="text" class="form-control" (input)="modificarNombre($event)"><br>
+             <label>Apellido</label>
+
+             <!-- en las dos direcciones -->
+             <input type="text" class="form-control" [(ngModel)]="apellido">
+
+             <p>{{ nombre }} {{ apellido }}</p>
+
+        </div>
+    </div>
+</div>
+
+<!-- <div (keyup)="0">
+    <p>Ingrese su nombre: <input #name placeholder= "name"></p><br>
+    <button type="button" (click)= "(name.value)">Call</button>
+
+    <p>Su nombre es: {{name.value}}</p><br>
+    <p>Su nombre es: {{ name1 }}</p>
+
+</div> -->
